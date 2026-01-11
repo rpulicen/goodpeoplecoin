@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google Tag Manager -->
+  <script async src="https://www.googletagmanager.com/gtm.js?id=GTM-XXXXXX"></script>
+  <!-- End Google Tag Manager -->
+
+  <!-- Google Analytics GA4 -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXX');
+  </script>
+  <!-- End Google Analytics -->
+
+  <!-- Google Ads Conversion Tracking -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-XXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'AW-XXXXXXX');
+  </script>
+  <!-- End Google Ads -->
+
+  <meta charset="UTF-8" />
+  <title>Sponsored Listings – GoodPeopleCoin</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta
+    name="description"
+    content="Sponsored listing options for charity and impact-focused crypto projects on GoodPeopleCoin. Transparent placements with clear disclosures and research-style coverage."
+  />
+  <meta name="robots" content="index,follow" />
+  <link rel="canonical" href="https://goodpeoplecoin.com/sponsored-listings.html" />
+
+  <!-- Basic branding -->
+  <meta name="author" content="GoodPeopleCoin" />
+  <meta
+    name="keywords"
+    content="sponsored listing, charity crypto promotion, impact crypto review, paid research listing"
+  />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="GoodPeopleCoin" />
+  <meta property="og:title" content="Sponsored Listings – GoodPeopleCoin" />
+  <meta
+    property="og:description"
+    content="Clearly labeled sponsored listings for charity & impact-focused crypto projects on GoodPeopleCoin."
+  />
+  <meta property="og:url" content="https://goodpeoplecoin.com/sponsored-listings.html" />
+  <meta property="og:image" content="https://goodpeoplecoin.com/goodpeoplecoin-logo.png" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:site" content="@goodpeoplecoin" />
+  <meta name="twitter:title" content="Sponsored Listings – GoodPeopleCoin" />
+  <meta
+    name="twitter:description"
+    content="Transparent sponsored placements for charity & impact-focused crypto projects on GoodPeopleCoin."
+  />
+  <meta name="twitter:image" content="https://goodpeoplecoin.com/goodpeoplecoin-logo.png" />
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg: #050505;
+      --bg-alt: #0b0b0b;
+      --accent: #00ff41;
+      --accent-soft: rgba(0, 255, 65, 0.12);
+      --text-main: #f5f5f5;
+      --text-muted: #a3a3a3;
+      --border-subtle: #1f1f1f;
+      --radius-lg: 18px;
+      --radius-md: 12px;
+    }
+    * { box-sizing: border-box; }
+    html, body {
+      margin: 0;
+      padding: 0;
+      background: radial-gradient(circle at top, #0c1a0f 0, #020202 40%, #000 100%);
+      color: var(--text-main);
+      font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+    }
+    a { color: inherit; text-decoration: none; }
+    .container {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 0 16px;
+    }
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      background: rgba(0, 0, 0, 0.9);
+      backdrop-filter: blur(18px);
+      border-bottom: 1px solid rgba(0, 255, 65, 0.35);
+    }
+    .nav-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 14px;
+      padding: 10px 16px;
+    }
+    .logo-mark {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .logo-icon {
+      width: 32px;
+      height: 32px;
+      border-radius: 999px;
+      background: radial-gradient(circle at 30% 20%, #ffffff 0, #00ff41 30%, #007a26 100%);
+      box-shadow: 0 0 24px rgba(0, 255, 65, 0.7);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .logo-icon::before {
+      content: "❤";
+      font-size: 16px;
+      color: #020202;
+      transform: translateY(-1px);
+    }
+    .logo-text-main {
+      font-size: 0.95rem;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+    .logo-text-main span {
+      color: var(--accent);
+    }
+    .logo-sub {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+    }
+    nav {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 0.85rem;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+    }
+    nav a {
+      padding: 6px 11px;
+      border-radius: 999px;
+      color: var(--text-muted);
+      border: 1px solid transparent;
+      white-space: nowrap;
+    }
+    nav a:hover {
+      border-color: rgba(0, 255, 65, 0.6);
+      color: var(--accent);
+      background: rgba(0, 255, 65, 0.1);
+    }
+    .nav-cta {
+      background: var(--accent);
+      color: #000;
+      font-weight: 600;
+      box-shadow: 0 0 18px rgba(0, 255, 65, 0.85);
+    }
+    main {
+      padding: 28px 0 34px;
+    }
+    .page-header {
+      margin-bottom: 18px;
+    }
+    .eyebrow {
+      font-size: 0.78rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 4px;
+    }
+    h1 {
+      font-size: 1.8rem;
+      margin: 0 0 8px;
+    }
+    .lead {
+      font-size: 0.95rem;
+      color: var(--text-muted);
+      max-width: 640px;
+    }
+    .info-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.5fr) minmax(0, 1.3fr);
+      gap: 18px;
+      align-items: flex-start;
+      margin-top: 18px;
+    }
+    .panel {
+      background: rgba(5, 5, 5, 0.96);
+      border-radius: var(--radius-lg);
+      border: 1px solid var(--border-subtle);
+      padding: 16px 16px 14px;
+      box-shadow: 0 16px 36px rgba(0, 0, 0, 0.95);
+    }
+    .panel h2 {
+      font-size: 1.05rem;
+      margin-top: 4px;
+      margin-bottom: 6px;
+    }
+    .panel p,
+    .panel ul {
+      font-size: 0.88rem;
+      color: var(--text-muted);
+      line-height: 1.6;
+      margin-bottom: 8px;
+    }
+    .badge {
+      display: inline-block;
+      font-size: 0.75rem;
+      padding: 3px 8px;
+      border-radius: 999px;
+      border: 1px solid rgba(0, 255, 65, 0.7);
+      background: rgba(0, 255, 65, 0.1);
+      color: var(--accent);
+      margin-bottom: 6px;
+    }
+    .tiers {
+      margin-top: 10px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 14px;
+    }
+    .tier-card {
+      background: rgba(7, 7, 7, 0.96);
+      border-radius: var(--radius-md);
+      border: 1px solid var(--border-subtle);
+      padding: 12px 12px 12px;
+    }
+    .tier-name {
+      font-size: 0.9rem;
+      font-weight: 600;
+      margin-bottom: 4px;
+    }
+    .tier-price {
+      font-size: 0.95rem;
+      color: var(--accent);
+      margin-bottom: 4px;
+    }
+    .tier-note {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      margin-bottom: 6px;
+    }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 8px 14px;
+      border-radius: 999px;
+      font-size: 0.82rem;
+      border: 1px solid transparent;
+      cursor: pointer;
+    }
+    .btn-primary {
+      background: var(--accent);
+      color: #000;
+      font-weight: 600;
+      box-shadow: 0 0 20px rgba(0, 255, 65, 0.9);
+    }
+    .btn-outline {
+      border-color: rgba(255, 255, 255, 0.2);
+      background: rgba(5, 5, 5, 0.95);
+      color: var(--text-muted);
+    }
+    .disclaimer {
+      margin-top: 10px;
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      border-left: 2px solid rgba(0, 255, 65, 0.7);
+      padding-left: 10px;
+    }
+    .faq {
+      margin-top: 22px;
+    }
+    .faq h2 {
+      font-size: 1rem;
+      margin-bottom: 8px;
+    }
+    .faq-item {
+      margin-bottom: 10px;
+    }
+    .faq-q {
+      font-size: 0.87rem;
+      font-weight: 600;
+      margin-bottom: 2px;
+    }
+    .faq-a {
+      font-size: 0.84rem;
+      color: var(--text-muted);
+    }
+    footer {
+      border-top: 1px solid var(--border-subtle);
+      padding: 14px 16px 18px;
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      background: rgba(0, 0, 0, 0.9);
+      margin-top: 20px;
+      text-align: center;
+    }
+    footer a { color: var(--accent); }
+    @media (max-width: 720px) {
+      nav { display: none; }
+      .info-grid {
+        grid-template-columns: minmax(0, 1fr);
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-XXXXXX"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+  <header>
+    <div class="nav-bar container">
+      <div class="logo-mark">
+        <div class="logo-icon"></div>
+        <div>
+          <div class="logo-text-main"><span>GoodPeople</span>Coin</div>
+          <div class="logo-sub">Independent charity &amp; impact crypto research</div>
+        </div>
+      </div>
+      <nav>
+        <a href="/">Home</a>
+        <a href="/#top-coins">Top Charity Coins</a>
+        <a href="/#binance-guide">Binance Charity</a>
+        <a href="/#launch-guide">Solana Launch Guide</a>
+        <a href="/sponsored-listings.html" class="nav-cta">Sponsored Listings</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section>
+      <div class="container">
+        <div class="page-header">
+          <div class="eyebrow">Sponsored placements • limited slots</div>
+          <h1>Sponsored Listings on GoodPeopleCoin</h1>
+          <p class="lead">
+            This page explains how sponsored listings work on GoodPeopleCoin. We only consider projects with a
+            charity or impact focus and clear donation structures. All sponsored placements are
+            <strong>clearly labeled</strong> and kept separate from general educational content.
+          </p>
+        </div>
+
+        <div class="info-grid">
+          <div class="panel">
+            <span class="badge">Independent &amp; selective</span>
+            <h2>What a sponsored listing includes</h2>
+            <p>Sponsored listings are research-style placements for teams that want additional visibility in front of people who care about verifiable impact.</p>
+            <ul>
+              <li>Project overview written in a neutral, descriptive tone</li>
+              <li>Mention of your donation wallet structure and transparency practices</li>
+              <li>Placement in the "Projects we track" area on the homepage (sponsored label)</li>
+              <li>Link to your official site and / or docs</li>
+              <li>Optional: one short mention on the @goodpeoplecoin account</li>
+            </ul>
+            <p>
+              A sponsored listing does <strong>not</strong> mean we are endorsing or recommending your token. It simply means we have reviewed the basic information you provided and are disclosing that your placement is paid.
+            </p>
+          </div>
+
+          <div class="panel">
+            <span class="badge">Minimum requirements</span>
+            <h2>What we look for before considering a listing</h2>
+            <ul>
+              <li>Clear charity or impact angle (who benefits, how often, how funds move)</li>
+              <li>Donation wallets that can be shared publicly</li>
+              <li>Ability to provide receipts, TX hashes, or other proof of impact over time</li>
+              <li>No obvious honeypot mechanics or opaque tokenomics</li>
+              <li>Agreement that coverage will remain neutral and clearly labeled as sponsored</li>
+            </ul>
+            <p>We reserve the right to decline any project that doesn't fit the focus or risk profile of this site.</p>
+          </div>
+        </div>
+
+        <div class="tiers">
+          <div class="tier-card">
+            <div class="tier-name">Tier 1 – Homepage card</div>
+            <div class="tier-price">From ~$500 equivalent / month</div>
+            <div class="tier-note">
+              • Sponsored card in the "Projects we track" section on the homepage, labeled as sponsored.
+              • Neutral summary + link to your site.
+            </div>
+            <a href="mailto:ads@goodpeoplecoin.com" class="btn btn-primary">Request Tier 1 details</a>
+          </div>
+
+          <div class="tier-card">
+            <div class="tier-name">Tier 2 – Homepage card + extended write-up</div>
+            <div class="tier-price">From ~$1,000 equivalent / month</div>
+            <div class="tier-note">
+              • Everything in Tier 1
+              • Plus a longer, dedicated write-up on your project's structure, goals, and impact plans.
+            </div>
+            <a href="mailto:ads@goodpeoplecoin.com" class="btn btn-primary">Request Tier 2 details</a>
+          </div>
+
+          <div class="tier-card">
+            <div class="tier-name">Tier 3 – Custom campaign</div>
+            <div class="tier-price">Custom pricing</div>
+            <div class="tier-note">
+              • For larger teams or foundations that want a deeper research focus, multi-article coverage, or a custom format.
+              • Limited availability.
+            </div>
+            <a href="mailto:ads@goodpeoplecoin.com" class="btn btn-outline">Ask about a custom campaign</a>
+          </div>
+        </div>
+
+        <div class="disclaimer">
+          Nothing on this page or anywhere on GoodPeopleCoin is financial, investment, tax, or legal advice. Sponsored
+          listings are paid placements and are always labeled as such. Inclusion does not mean we have audited, certified,
+          or vouched for a project. Crypto assets are highly volatile and risky; always do your own research and consult
+          qualified professionals.
+        </div>
+
+        <div class="faq">
+          <h2>Frequently asked questions</h2>
+
+          <div class="faq-item">
+            <div class="faq-q">Do you guarantee any results or token performance?</div>
+            <div class="faq-a">
+              No. A sponsored listing is a visibility product, not a guarantee of performance. We do not comment on price,
+              upside, or future performance.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-q">Can you change something if our project structure evolves?</div>
+            <div class="faq-a">
+              We can adjust factual details over time (such as donation wallet addresses or updated impact reports) as part
+              of an ongoing listing, as long as the core agreement remains intact.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-q">How do we start the process?</div>
+            <div class="faq-a">
+              Email <a href="mailto:ads@goodpeoplecoin.com">ads@goodpeoplecoin.com</a> with your project name, links,
+              donation structure, and which tier you are interested in. We'll reply with a short questionnaire and current availability.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-q">Can you refuse or remove a listing?</div>
+            <div class="faq-a">
+              Yes. We reserve the right to decline or remove listings that no longer fit the focus or risk tolerance of this
+              site, especially if we see misleading claims or major undisclosed changes.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    Contact: adsgoodpeoplecoin.com@gmail.com • GoodPeopleCoin.com © 2025–2026 • Independent research. Not financial, tax or legal advice.<br>
+    <a href="/articles/index.html" style="color: var(--accent);">Articles</a> •
+    <a href="mailto:adsgoodpeoplecoin.com@gmail.com" style="color: var(--accent);">Contact</a>
+  </footer>
+</body>
+</html>

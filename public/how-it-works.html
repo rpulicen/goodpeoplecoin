@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google Tag Manager -->
+  <script async src="https://www.googletagmanager.com/gtm.js?id=GTM-XXXXXX"></script>
+  <!-- End Google Tag Manager -->
+
+  <!-- Google Analytics GA4 -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXX');
+  </script>
+  <!-- End Google Analytics -->
+
+  <!-- Google Ads Conversion Tracking -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-XXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'AW-XXXXXXX');
+  </script>
+  <!-- End Google Ads -->
+
+  <meta charset="UTF-8" />
+  <title>How GoodPeopleCoin Works – Methodology & Transparency</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta
+    name="description"
+    content="Learn how GoodPeopleCoin researches charity and impact-focused crypto projects, how sponsored listings are handled, and what our independence and disclosure standards are."
+  />
+  <meta name="robots" content="index,follow" />
+  <link rel="canonical" href="https://goodpeoplecoin.com/how-it-works.html" />
+
+  <!-- Basic branding -->
+  <meta name="author" content="GoodPeopleCoin" />
+  <meta
+    name="keywords"
+    content="how it works, goodpeoplecoin methodology, charity crypto research, impact crypto transparency, sponsored listing policy"
+  />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="GoodPeopleCoin" />
+  <meta property="og:title" content="How GoodPeopleCoin Works – Methodology & Transparency" />
+  <meta
+    property="og:description"
+    content="Overview of GoodPeopleCoin's research approach, independence, sponsored listing rules, and transparency standards for charity & impact crypto coverage."
+  />
+  <meta property="og:url" content="https://goodpeoplecoin.com/how-it-works.html" />
+  <meta property="og:image" content="https://goodpeoplecoin.com/goodpeoplecoin-logo.png" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:site" content="@goodpeoplecoin" />
+  <meta name="twitter:title" content="How GoodPeopleCoin Works – Methodology & Transparency" />
+  <meta
+    name="twitter:description"
+    content="How GoodPeopleCoin researches charity & impact-focused crypto projects and handles sponsored listings with clear disclosures."
+  />
+  <meta name="twitter:image" content="https://goodpeoplecoin.com/goodpeoplecoin-logo.png" />
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg: #050505;
+      --bg-alt: #0b0b0b;
+      --accent: #00ff41;
+      --accent-soft: rgba(0, 255, 65, 0.12);
+      --text-main: #f5f5f5;
+      --text-muted: #a3a3a3;
+      --border-subtle: #1f1f1f;
+      --radius-lg: 18px;
+      --radius-md: 12px;
+    }
+    * { box-sizing: border-box; }
+    html, body {
+      margin: 0;
+      padding: 0;
+      background: radial-gradient(circle at top, #0c1a0f 0, #020202 40%, #000 100%);
+      color: var(--text-main);
+      font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+    }
+    a { color: inherit; text-decoration: none; }
+    .container {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 0 16px;
+    }
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      background: rgba(0, 0, 0, 0.9);
+      backdrop-filter: blur(18px);
+      border-bottom: 1px solid rgba(0, 255, 65, 0.35);
+    }
+    .nav-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 14px;
+      padding: 10px 16px;
+    }
+    .logo-mark {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .logo-icon {
+      width: 32px;
+      height: 32px;
+      border-radius: 999px;
+      background: radial-gradient(circle at 30% 20%, #ffffff 0, #00ff41 30%, #007a26 100%);
+      box-shadow: 0 0 24px rgba(0, 255, 65, 0.7);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .logo-icon::before {
+      content: "❤";
+      font-size: 16px;
+      color: #020202;
+      transform: translateY(-1px);
+    }
+    .logo-text-main {
+      font-size: 0.95rem;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+    .logo-text-main span {
+      color: var(--accent);
+    }
+    .logo-sub {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+    }
+    nav {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 0.85rem;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+    }
+    nav a {
+      padding: 6px 11px;
+      border-radius: 999px;
+      color: var(--text-muted);
+      border: 1px solid transparent;
+      white-space: nowrap;
+    }
+    nav a:hover {
+      border-color: rgba(0, 255, 65, 0.6);
+      color: var(--accent);
+      background: rgba(0, 255, 65, 0.1);
+    }
+    .nav-cta {
+      background: var(--accent);
+      color: #000;
+      font-weight: 600;
+      box-shadow: 0 0 18px rgba(0, 255, 65, 0.85);
+    }
+    main {
+      padding: 28px 0 34px;
+    }
+    .page-header {
+      margin-bottom: 18px;
+    }
+    .eyebrow {
+      font-size: 0.78rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 4px;
+    }
+    h1 {
+      font-size: 1.8rem;
+      margin: 0 0 8px;
+    }
+    .lead {
+      font-size: 0.95rem;
+      color: var(--text-muted);
+      max-width: 640px;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.5fr) minmax(0, 1.3fr);
+      gap: 18px;
+      align-items: flex-start;
+      margin-top: 18px;
+    }
+    .panel {
+      background: rgba(5, 5, 5, 0.96);
+      border-radius: var(--radius-lg);
+      border: 1px solid var(--border-subtle);
+      padding: 16px 16px 14px;
+      box-shadow: 0 16px 36px rgba(0, 0, 0, 0.95);
+    }
+    .panel h2 {
+      font-size: 1.05rem;
+      margin-top: 4px;
+      margin-bottom: 6px;
+    }
+    .panel p,
+    .panel ul {
+      font-size: 0.88rem;
+      color: var(--text-muted);
+      line-height: 1.6;
+      margin-bottom: 8px;
+    }
+    .badge {
+      display: inline-block;
+      font-size: 0.75rem;
+      padding: 3px 8px;
+      border-radius: 999px;
+      border: 1px solid rgba(0, 255, 65, 0.7);
+      background: rgba(0, 255, 65, 0.1);
+      color: var(--accent);
+      margin-bottom: 6px;
+    }
+    .list-tight li {
+      margin-bottom: 4px;
+    }
+    .section-block {
+      margin-top: 20px;
+    }
+    .section-block h2 {
+      font-size: 1rem;
+      margin-bottom: 6px;
+    }
+    .section-block p,
+    .section-block ul {
+      font-size: 0.86rem;
+      color: var(--text-muted);
+      line-height: 1.6;
+    }
+    .disclaimer {
+      margin-top: 12px;
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      border-left: 2px solid rgba(0, 255, 65, 0.7);
+      padding-left: 10px;
+    }
+    footer {
+      border-top: 1px solid var(--border-subtle);
+      padding: 14px 16px 18px;
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      background: rgba(0, 0, 0, 0.9);
+      margin-top: 20px;
+      text-align: center;
+    }
+    footer a { color: var(--accent); }
+    @media (max-width: 720px) {
+      nav { display: none; }
+      .grid {
+        grid-template-columns: minmax(0, 1fr);
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-XXXXXX"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+  <header>
+    <div class="nav-bar container">
+      <div class="logo-mark">
+        <div class="logo-icon"></div>
+        <div>
+          <div class="logo-text-main"><span>GoodPeople</span>Coin</div>
+          <div class="logo-sub">Independent charity &amp; impact crypto research</div>
+        </div>
+      </div>
+      <nav>
+        <a href="/">Home</a>
+        <a href="/how-it-works.html">How It Works</a>
+        <a href="/#top-coins">Top Charity Coins</a>
+        <a href="/#binance-guide">Binance Charity</a>
+        <a href="/#launch-guide">Solana Launch Guide</a>
+        <a href="/sponsored-listings.html" class="nav-cta">Sponsored Listings</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section>
+      <div class="container">
+        <div class="page-header">
+          <div class="eyebrow">About • methodology</div>
+          <h1>How GoodPeopleCoin Works</h1>
+          <p class="lead">
+            GoodPeopleCoin is a small, independent project focused on charity and impact-focused crypto. This page
+            explains what we cover, how we think about transparency, and how sponsored listings are handled.
+          </p>
+        </div>
+
+        <div class="grid">
+          <div class="panel">
+            <span class="badge">Scope of coverage</span>
+            <h2>What we actually look at</h2>
+            <p>
+              The main focus of GoodPeopleCoin is projects that claim some mix of:
+            </p>
+            <ul class="list-tight">
+              <li>Charity or nonprofit donations</li>
+              <li>Impact or public goods funding (on- or off-chain)</li>
+              <li>Donation wallets, treasury wallets, or on-chain proofs of impact</li>
+            </ul>
+            <p>
+              We do not try to track every meme coin or speculative token. Instead, we pay attention to projects
+              that at least attempt to connect token activity with real-world outcomes or public goods.
+            </p>
+          </div>
+
+          <div class="panel">
+            <span class="badge">Independence &amp; sponsored content</span>
+            <h2>How "sponsored listings" work</h2>
+            <p>
+              GoodPeopleCoin is not an exchange, a launchpad, or a fundraising platform. We do not custody funds.
+              For a limited number of teams, we offer clearly labeled sponsored placements:
+            </p>
+            <ul class="list-tight">
+              <li>Sponsored cards or write-ups are <strong>always labeled as sponsored</strong>.</li>
+              <li>Coverage is descriptive, not promotional or predictive.</li>
+              <li>We do not comment on price targets or upside.</li>
+              <li>We reserve the right to decline or remove listings at our discretion.</li>
+            </ul>
+            <p>
+              Sponsored coverage does not mean we have audited or endorsed a project. It simply means we have
+              reviewed baseline information and agreed to describe it in a neutral tone with disclosures.
+            </p>
+          </div>
+        </div>
+
+        <div class="section-block">
+          <h2>How we review basic project information</h2>
+          <p>
+            For both general write-ups and sponsored placements, we typically look at a few simple things:
+          </p>
+          <ul>
+            <li>Whether there is a clear description of the charity or impact goal.</li>
+            <li>Whether donation wallets are shared and, where possible, visible on-chain.</li>
+            <li>Whether there are any public receipts, reports, or proofs of past impact.</li>
+            <li>Whether tokenomics or mechanics are explained in a way a normal reader can understand.</li>
+          </ul>
+          <p>
+            We do not perform smart contract audits, regulatory checks, or deep technical due diligence. Readers
+            should treat all pages on this site as starting points for their own research, not as final answers.
+          </p>
+        </div>
+
+        <div class="section-block">
+          <h2>What we don't do</h2>
+          <ul>
+            <li>We do not provide financial, investment, tax, or legal advice.</li>
+            <li>We do not offer personalized recommendations on which tokens to buy or sell.</li>
+            <li>We do not guarantee the behavior, honesty, or long-term viability of any project.</li>
+            <li>We do not run fundraising campaigns or accept user deposits on behalf of other projects.</li>
+          </ul>
+          <p>
+            Crypto assets are volatile and risky. Charity- or impact-themed tokens can fail, pivot, or stop donating
+            altogether. Anyone considering getting involved with a project should consult professionals and double-check
+            information directly with the relevant organizations.
+          </p>
+        </div>
+
+        <div class="section-block">
+          <h2>Transparency and corrections</h2>
+          <p>
+            If a project we mention updates its structure, changes its donation wallets, or releases new impact reports,
+            we may update existing pages to reflect those facts over time. We also welcome corrections and clarifications
+            from teams and readers.
+          </p>
+          <p>
+            If you see something that looks inaccurate, you can reach out via:
+            <a href="mailto:ads@goodpeoplecoin.com">ads@goodpeoplecoin.com</a> or on X at
+            <a href="https://x.com/goodpeoplecoin" target="_blank" rel="noopener">@goodpeoplecoin</a>.
+          </p>
+        </div>
+
+        <div class="disclaimer">
+          This page is for context only and may evolve over time as the site grows. Nothing on GoodPeopleCoin is
+          financial, investment, tax, or legal advice. Inclusion or mention of any project does not mean endorsement
+          or verification. Always do your own research and seek qualified professional guidance where appropriate.
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    GoodPeopleCoin.com © 2025–2026 • Independent research on charity &amp; impact-focused crypto projects.
+    Not financial, investment, tax, or legal advice.
+  </footer>
+</body>
+</html>

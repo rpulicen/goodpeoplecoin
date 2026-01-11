@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google Tag Manager -->
+  <script async src="https://www.googletagmanager.com/gtm.js?id=GTM-XXXXXX"></script>
+  <!-- End Google Tag Manager -->
+
+  <!-- Google Analytics GA4 -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXX');
+  </script>
+  <!-- End Google Analytics -->
+
+  <!-- Google Ads Conversion Tracking -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-XXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'AW-XXXXXXX');
+  </script>
+  <!-- End Google Ads -->
+
+  <meta charset="UTF-8" />
+  <title>Articles – GoodPeopleCoin</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="In-depth articles about charity crypto, impact tokens, on-chain philanthropy, and donation transparency." />
+  <meta name="robots" content="index,follow" />
+  <link rel="canonical" href="https://goodpeoplecoin.com/articles/" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg: #050505;
+      --bg-alt: #0b0b0b;
+      --card: #101010;
+      --accent: #00ff41;
+      --accent-soft: rgba(0, 255, 65, 0.12);
+      --text-main: #f5f5f5;
+      --text-muted: #a3a3a3;
+      --border-subtle: #1f1f1f;
+      --radius-lg: 16px;
+      --radius-xl: 24px;
+      --shadow-soft: 0 18px 45px rgba(0, 0, 0, 0.75);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html, body {
+      margin: 0;
+      padding: 0;
+      background: radial-gradient(circle at top, #0c1a0f 0, #020202 40%, #000 100%);
+      color: var(--text-main);
+      font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+      scroll-behavior: smooth;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .container {
+      max-width: 1180px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    header {
+      padding: 20px 0;
+      border-bottom: 1px solid var(--border-subtle);
+      background: rgba(5, 5, 5, 0.8);
+      backdrop-filter: blur(10px);
+      position: sticky;
+      top: 0;
+      z-index: 999;
+    }
+
+    .nav-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo {
+      font-size: 1.4rem;
+      font-weight: 900;
+      color: var(--accent);
+      text-shadow: 0 0 20px rgba(0, 255, 65, 0.8);
+    }
+
+    nav {
+      display: flex;
+      gap: 24px;
+      align-items: center;
+    }
+
+    nav a {
+      font-size: 0.95rem;
+      font-weight: 500;
+      color: var(--text-muted);
+      transition: color 0.2s;
+    }
+
+    nav a:hover {
+      color: var(--accent);
+    }
+
+    main {
+      padding: 80px 0;
+      min-height: 70vh;
+    }
+
+    h1 {
+      font-size: 3rem;
+      font-weight: 900;
+      margin: 0 0 16px;
+      background: linear-gradient(135deg, var(--accent), #00d936);
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      letter-spacing: -0.04em;
+    }
+
+    .subtitle {
+      font-size: 1.2rem;
+      color: var(--text-muted);
+      margin-bottom: 60px;
+      line-height: 1.6;
+    }
+
+    .article-list {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+    }
+
+    .article-card {
+      background: var(--card);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-lg);
+      padding: 32px;
+      transition: all 0.3s ease;
+      cursor: pointer;
+    }
+
+    .article-card:hover {
+      border-color: var(--accent);
+      box-shadow: 0 0 30px rgba(0, 255, 65, 0.2);
+      transform: translateY(-2px);
+    }
+
+    .article-title {
+      font-size: 1.5rem;
+      font-weight: 700;
+      margin: 0 0 12px;
+      color: var(--text-main);
+    }
+
+    .article-desc {
+      font-size: 1rem;
+      color: var(--text-muted);
+      line-height: 1.6;
+      margin: 0;
+    }
+
+    .coming-soon {
+      display: inline-block;
+      background: rgba(255, 193, 7, 0.1);
+      color: #ffc107;
+      font-size: 0.75rem;
+      font-weight: 600;
+      padding: 4px 10px;
+      border-radius: 999px;
+      margin-left: 12px;
+    }
+
+    footer {
+      padding: 60px 0;
+      border-top: 1px solid var(--border-subtle);
+      text-align: center;
+      color: var(--text-muted);
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 768px) {
+      h1 {
+        font-size: 2rem;
+      }
+
+      .subtitle {
+        font-size: 1rem;
+      }
+
+      .article-card {
+        padding: 24px;
+      }
+
+      .article-title {
+        font-size: 1.2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-XXXXXX"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+  <header>
+    <div class="nav-bar container">
+      <a href="/" class="logo">GoodPeopleCoin</a>
+      <nav>
+        <a href="/">Home</a>
+        <a href="/rankings.html">Rankings</a>
+        <a href="/articles/">Articles</a>
+        <a href="/contact.html">Contact</a>
+        <a href="/how-it-works.html">How It Works</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="container">
+      <h1>Articles</h1>
+      <p class="subtitle">
+        In-depth guides, reviews, and explainers covering charity crypto projects, on-chain philanthropy, and donation transparency.
+      </p>
+
+      <div class="article-list">
+        <a href="/articles/top-charity-crypto-2025.html" class="article-card">
+          <h2 class="article-title">Top Charity Crypto Projects in 2025 (Ranked by Transparency)</h2>
+          <p class="article-desc">
+            A comprehensive ranking of the most transparent charity-focused crypto projects, evaluated on donation tracking, fund distribution, and on-chain verification.
+          </p>
+        </a>
+
+        <a href="/articles/on-chain-philanthropy-guide.html" class="article-card">
+          <h2 class="article-title">How On-Chain Philanthropy Works (Beginner Guide)</h2>
+          <p class="article-desc">
+            A beginner-friendly explainer on how blockchain technology enables transparent, verifiable charitable giving and fund tracking.
+          </p>
+        </a>
+
+        <a href="/articles/crypto-charity-risks.html" class="article-card">
+          <h2 class="article-title">Crypto Charity Tokens: Risks, Red Flags & Verification</h2>
+          <p class="article-desc">
+            Learn how to identify legitimate charity tokens, spot red flags, and verify donation claims before contributing.
+          </p>
+        </a>
+
+        <a href="/articles/best-wallets-donations-2025.html" class="article-card">
+          <h2 class="article-title">Best Wallets & Tools for Crypto Donations (2025 Guide)</h2>
+          <p class="article-desc">
+            A practical guide to the best wallets, platforms, and tools for making crypto donations securely and efficiently.
+          </p>
+        </a>
+
+        <a href="/articles/binance-charity-explainer.html" class="article-card">
+          <h2 class="article-title">How Binance Charity Tracks Funds On-Chain (Case Study)</h2>
+          <p class="article-desc">
+            A neutral case study on how Binance Charity structures campaigns, uses on-chain elements, and reports donations and distributions.
+          </p>
+        </a>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>
+        Contact: adsgoodpeoplecoin.com@gmail.com • GoodPeopleCoin.com © 2025–2026 • Independent research. Not financial, tax or legal advice.
+      </p>
+      <p style="margin-top: 8px;">
+        <a href="/articles/index.html" style="color: var(--accent);">Articles</a>
+        <span> • </span>
+        <a href="mailto:adsgoodpeoplecoin.com@gmail.com" style="color: var(--accent);">Contact</a>
+      </p>
+    </div>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google Tag Manager -->
+  <script async src="https://www.googletagmanager.com/gtm.js?id=GTM-XXXXXX"></script>
+  <!-- End Google Tag Manager -->
+
+  <!-- Google Analytics GA4 -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXX');
+  </script>
+  <!-- End Google Analytics -->
+
+  <!-- Google Ads Conversion Tracking -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-XXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'AW-XXXXXXX');
+  </script>
+  <!-- End Google Ads -->
+
+  <meta charset="UTF-8" />
+  <title>Crypto Charity Tokens: Risks, Red Flags & Verification (Part 1) – GoodPeopleCoin</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta
+    name="description"
+    content="Independent, beginner-friendly breakdown of the risks and red flags in charity and impact crypto tokens, and why verification matters before trusting donation claims."
+  />
+  <meta name="robots" content="index,follow" />
+  <link rel="canonical" href="https://goodpeoplecoin.com/articles/crypto-charity-risks.html" />
+
+  <!-- Basic branding -->
+  <meta name="author" content="GoodPeopleCoin" />
+  <meta
+    name="keywords"
+    content="charity crypto risks, charity token red flags, crypto donation scams, impact crypto verification, on-chain charity due diligence"
+  />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="article" />
+  <meta property="og:site_name" content="GoodPeopleCoin" />
+  <meta property="og:title" content="Crypto Charity Tokens: Risks, Red Flags & Verification (Part 1)" />
+  <meta
+    property="og:description"
+    content="A modern, neutral breakdown of where charity-themed tokens go wrong, common red flags, and why verification matters before trusting any donation narrative."
+  />
+  <meta property="og:url" content="https://goodpeoplecoin.com/articles/crypto-charity-risks.html" />
+  <meta property="og:image" content="https://goodpeoplecoin.com/goodpeoplecoin-logo.png" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:site" content="@goodpeoplecoin" />
+  <meta name="twitter:title" content="Crypto Charity Tokens: Risks, Red Flags & Verification (Part 1)" />
+  <meta
+    name="twitter:description"
+    content="Part 1 of a practical guide to charity and impact crypto tokens — structural risks, donation red flags, and what to watch before trusting the story."
+  />
+  <meta name="twitter:image" content="https://goodpeoplecoin.com/goodpeoplecoin-logo.png" />
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg: #050505;
+      --bg-alt: #0b0b0b;
+      --accent: #00ff41;
+      --text-main: #f5f5f5;
+      --text-muted: #a3a3a3;
+      --border-subtle: #1f1f1f;
+      --radius-lg: 18px;
+      --radius-md: 12px;
+    }
+    * { box-sizing: border-box; }
+    html, body {
+      margin: 0;
+      padding: 0;
+      background: radial-gradient(circle at top, #0c1a0f 0, #020202 40%, #000 100%);
+      color: var(--text-main);
+      font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+    }
+    a { color: inherit; text-decoration: none; }
+    a:hover { color: var(--accent); }
+
+    .container {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 0 16px;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      background: rgba(0, 0, 0, 0.9);
+      backdrop-filter: blur(18px);
+      border-bottom: 1px solid rgba(0, 255, 65, 0.35);
+    }
+    .nav-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 14px;
+      padding: 10px 16px;
+    }
+    .logo-mark {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .logo-icon {
+      width: 32px;
+      height: 32px;
+      border-radius: 999px;
+      background: radial-gradient(circle at 30% 20%, #ffffff 0, #00ff41 30%, #007a26 100%);
+      box-shadow: 0 0 24px rgba(0, 255, 65, 0.7);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .logo-icon::before {
+      content: "❤";
+      font-size: 16px;
+      color: #020202;
+      transform: translateY(-1px);
+    }
+    .logo-text-main {
+      font-size: 0.95rem;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+    .logo-text-main span { color: var(--accent); }
+    .logo-sub {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+    }
+    nav {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 0.85rem;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+    }
+    nav a {
+      padding: 6px 11px;
+      border-radius: 999px;
+      color: var(--text-muted);
+      border: 1px solid transparent;
+      white-space: nowrap;
+    }
+    nav a:hover {
+      border-color: rgba(0, 255, 65, 0.6);
+      color: var(--accent);
+      background: rgba(0, 255, 65, 0.1);
+    }
+    .nav-cta {
+      background: var(--accent);
+      color: #000;
+      font-weight: 600;
+      box-shadow: 0 0 18px rgba(0, 255, 65, 0.85);
+    }
+
+    main {
+      padding: 28px 0 34px;
+    }
+    .page-header {
+      margin-bottom: 18px;
+    }
+    .eyebrow {
+      font-size: 0.78rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 4px;
+    }
+    h1 {
+      font-size: 1.85rem;
+      margin: 0 0 8px;
+    }
+    .meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      margin-bottom: 10px;
+    }
+    .lead {
+      font-size: 0.96rem;
+      color: var(--text-muted);
+      max-width: 720px;
+    }
+
+    .article {
+      margin-top: 20px;
+    }
+    .article-block {
+      background: rgba(5, 5, 5, 0.96);
+      border-radius: var(--radius-lg);
+      border: 1px solid var(--border-subtle);
+      padding: 16px 16px 14px;
+      box-shadow: 0 18px 40px rgba(0, 0, 0, 0.95);
+      margin-bottom: 16px;
+    }
+    .article h2 {
+      font-size: 1.12rem;
+      margin-top: 8px;
+      margin-bottom: 6px;
+    }
+    .article h3 {
+      font-size: 1rem;
+      margin-top: 10px;
+      margin-bottom: 4px;
+    }
+    .article p,
+    .article ul {
+      font-size: 0.88rem;
+      color: var(--text-muted);
+      line-height: 1.6;
+      margin-bottom: 8px;
+    }
+    .article ul {
+      padding-left: 18px;
+    }
+    .pill {
+      display: inline-block;
+      font-size: 0.75rem;
+      border-radius: 999px;
+      padding: 3px 8px;
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      color: var(--text-muted);
+      margin-right: 6px;
+      margin-bottom: 4px;
+    }
+
+    .note {
+      font-size: 0.84rem;
+      color: var(--text-muted);
+      border-left: 2px solid rgba(0, 255, 65, 0.7);
+      padding-left: 10px;
+      margin-top: 10px;
+    }
+
+    .affiliate-strip {
+      margin-top: 14px;
+      margin-bottom: 8px;
+      padding: 12px;
+      border-radius: 999px;
+      border: 1px solid rgba(0, 255, 65, 0.4);
+      background: radial-gradient(circle at left, rgba(0, 255, 65, 0.2), rgba(0, 0, 0, 0.9));
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      align-items: center;
+      justify-content: space-between;
+      font-size: 0.8rem;
+    }
+    .affiliate-strip span {
+      color: var(--text-muted);
+    }
+    .affiliate-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+    }
+    .affiliate-btn {
+      padding: 5px 10px;
+      border-radius: 999px;
+      border: 1px solid rgba(0, 255, 65, 0.6);
+      font-size: 0.78rem;
+      cursor: pointer;
+      background: rgba(0, 0, 0, 0.9);
+    }
+    .affiliate-btn:hover {
+      background: rgba(0, 255, 65, 0.12);
+      color: var(--accent);
+    }
+
+    .disclaimer {
+      margin-top: 16px;
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      border-left: 2px solid rgba(0, 255, 65, 0.7);
+      padding-left: 10px;
+    }
+
+    .back-link {
+      margin-top: 16px;
+      font-size: 0.85rem;
+    }
+    .back-link a {
+      color: var(--accent);
+    }
+
+    footer {
+      border-top: 1px solid var(--border-subtle);
+      padding: 14px 16px 18px;
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      background: rgba(0, 0, 0, 0.9);
+      margin-top: 24px;
+      text-align: center;
+    }
+    footer a { color: var(--accent); }
+
+    @media (max-width: 720px) {
+      nav { display: none; }
+    }
+  </style>
+</head>
+<body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-XXXXXX"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+  <header>
+    <div class="nav-bar container">
+      <div class="logo-mark">
+        <div class="logo-icon"></div>
+        <div>
+          <div class="logo-text-main"><span>GoodPeople</span>Coin</div>
+          <div class="logo-sub">Independent charity &amp; impact crypto research</div>
+        </div>
+      </div>
+      <nav>
+        <a href="/">Home</a>
+        <a href="/how-it-works.html">How It Works</a>
+        <a href="/articles/index.html">Articles</a>
+        <a href="/contact.html">Contact</a>
+        <a href="/sponsored-listings.html" class="nav-cta">Sponsored Listings</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section>
+      <div class="container">
+        <div class="page-header">
+          <div class="eyebrow">Risk education • part 1</div>
+          <h1>Crypto Charity Tokens: Risks, Red Flags &amp; Verification (Part 1)</h1>
+          <div class="meta">
+            <span>Updated for 2025</span>
+            <span>Independent risk overview</span>
+          </div>
+          <p class="lead">
+            Slapping "charity" or "impact" on a token logo doesn't magically make it honest. In this first part of a
+            two-part guide, we go through the structural risks and red flags that show up again and again in
+            charity-themed and impact-branded crypto projects — before we talk about how to verify anything.
+          </p>
+        </div>
+
+        <div class="article">
+
+          <div class="article-block">
+            <h2>1. Why "Charity Crypto" Is High Risk by Default</h2>
+            <p>
+              Most charity- or impact-branded tokens sit at the intersection of two already risky things:
+              highly volatile assets and emotionally charged narratives. That combination can attract both sincere
+              builders and opportunists who understand that "doing good" is a powerful marketing hook.
+            </p>
+            <p>Some of the baseline risks include:</p>
+            <ul>
+              <li>
+                <strong>Extreme volatility</strong> – Tokens can move 50–90% in either direction with relatively
+                little liquidity.
+              </li>
+              <li>
+                <strong>Short project lifespans</strong> – Many meme-style launches last days or weeks before
+                attention moves on.
+              </li>
+              <li>
+                <strong>Asymmetric information</strong> – Developers know the full tokenomics and wallet map;
+                casual participants usually do not.
+              </li>
+              <li>
+                <strong>Emotional framing</strong> – Donors and traders may feel pressure to support "for the cause,"
+                even when they'd normally walk away from the risk.
+              </li>
+            </ul>
+            <p>
+              None of this automatically makes a token illegitimate, but it does mean charity branding should never
+              be used as a reason to turn off skepticism.
+            </p>
+          </div>
+
+          <div class="article-block">
+            <h2>2. The Most Common Structural Red Flags</h2>
+            <p>
+              Before you even look at donation claims, there are structural details that can tell you a lot about the
+              project's priorities.
+            </p>
+
+            <h3>a) No clear separation of wallets</h3>
+            <p>Healthy setups usually distinguish between:</p>
+            <ul>
+              <li>Donation wallets (for actual charitable transfers).</li>
+              <li>Treasury wallets (for development, liquidity, operations).</li>
+              <li>Team or founder wallets (compensation, locked allocations).</li>
+            </ul>
+            <p>
+              When everything flows through a single address, or when "charity funds" sit next to obvious personal
+              spending, it's much harder for anyone to evaluate what's really happening.
+            </p>
+
+            <h3>b) No multi-sig on key funds</h3>
+            <p>
+              When one private key can move all the supposed donation reserves, observers are effectively trusting a
+              single person not to change their mind. Multi-signature (multi-sig) setups do not solve everything, but
+              they at least require collaboration and make unilateral decisions harder.
+            </p>
+
+            <h3>c) Tokenomics that reward teams more than causes</h3>
+            <p>
+              Some tokens allocate only a small fraction of fees or supply to charitable activity, while large chunks
+              end up with insiders. The more the design favors insiders and early holders over any stated cause, the
+              more the "charity" label starts to look like branding rather than a core mission.
+            </p>
+          </div>
+
+          <div class="article-block">
+            <h2>3. Donation Claims Without Verifiable Proof</h2>
+            <p>
+              One of the easiest patterns to spot across problematic projects is the "we donated" announcement with
+              very little behind it.
+            </p>
+            <p>Some common variations:</p>
+            <ul>
+              <li>
+                <strong>Screenshots only</strong> – A single screenshot is shared as proof, with no wallet addresses,
+                transaction hashes, or independent confirmations.
+              </li>
+              <li>
+                <strong>One-time donation</strong> – A small donation is made early on, heavily promoted, and never
+                repeated once marketing attention fades.
+              </li>
+              <li>
+                <strong>Vague aggregations</strong> – "We've donated over $X!" with little clarity on which
+                organizations received funds, when, or how.
+              </li>
+              <li>
+                <strong>Future promises</strong> – "We plan to donate after the presale / launch / new ATH," which
+                may never actually arrive.
+              </li>
+            </ul>
+            <p>
+              In a genuinely transparent setup, donation campaigns typically come with clear amounts, addresses,
+              timestamps, and—ideally—some acknowledgement from the receiving organization.
+            </p>
+          </div>
+
+          <div class="article-block">
+            <h2>4. Wallet Behaviour That Doesn't Match the Story</h2>
+            <p>
+              One of the advantages of blockchain-based projects is that, for the most part, money movements can be
+              examined. That doesn't mean every observer has the time or skills to do full forensic work, but there
+              are some obvious mismatches that people watch for.
+            </p>
+
+            <h3>a) Donation wallets that only receive, never send</h3>
+            <p>
+              If a project advertises ongoing donations, but the published "charity" wallet mostly accumulates funds
+              without outbound transfers, the natural question is: when does any of this actually reach a cause?
+            </p>
+
+            <h3>b) Large transfers to unknown or personal wallets</h3>
+            <p>
+              When donation or treasury wallets suddenly send significant amounts to unlabeled or clearly personal
+              addresses, with no explanation or receipts, it tends to undermine the idea that funds are tightly tied
+              to impact activities.
+            </p>
+
+            <h3>c) Clusters of insider selling around major announcements</h3>
+            <p>
+              In some cases, large holders move or sell significant amounts of tokens shortly before or after
+              high-profile announcements about donations or listings. That may not always be malicious, but it
+              can be a sign that "charity news" is being used as exit liquidity.
+            </p>
+          </div>
+
+          <div class="article-block">
+            <h2>5. Marketing Patterns That Should Make People Pause</h2>
+            <p>
+              Beyond numbers and wallets, the tone and style of marketing can also give clues. Red flags in messaging
+              often include:
+            </p>
+            <ul>
+              <li>
+                <strong>Heavy emotional pressure</strong> – framing participation as a moral obligation rather than a
+                high-risk financial decision.
+              </li>
+              <li>
+                <strong>Guaranteed outcome language</strong> – implying both high returns and high impact are assured.
+              </li>
+              <li>
+                <strong>Attacks on critics</strong> – any attempt to discredit basic questions about wallets, audits,
+                or reporting.
+              </li>
+              <li>
+                <strong>Borrowed legitimacy</strong> – casually referencing major charities or brands that have never
+                publicly acknowledged the project.
+              </li>
+            </ul>
+            <p>
+              Serious teams may still be enthusiastic, but they usually expect and welcome due diligence questions.
+            </p>
+          </div>
+
+          <div class="article-block">
+            <h2>6. User Safety &amp; Expectations</h2>
+            <p>
+              One of the recurring themes in charity-themed launches is that people are willing to accept levels of
+              risk they normally wouldn't, because they feel like they are "doing good" even if the price goes to
+              zero. That can be exploited.
+            </p>
+            <p>For personal safety, some basic principles apply:</p>
+            <ul>
+              <li>
+                Treat every token as a high-risk asset first, even if the cause is something you care about deeply.
+              </li>
+              <li>
+                Consider whether direct donations to known organizations might be a simpler option for you.
+              </li>
+              <li>
+                Never feel obligated to participate in something you don't fully understand just because it's framed
+                as charitable.
+              </li>
+            </ul>
+            <p>
+              The promise of impact should not override normal risk management decisions or basic financial caution.
+            </p>
+          </div>
+
+          <div class="article-block">
+            <h2>7. Why Verification Matters More Than Branding</h2>
+            <p>
+              At the end of the day, it doesn't matter how compelling a token name, mascot, or mission statement
+              sounds. What matters is whether:
+            </p>
+            <ul>
+              <li>Donation and treasury wallets can be inspected.</li>
+              <li>Funds move in a way that matches public claims.</li>
+              <li>Recipient organizations acknowledge or confirm support.</li>
+              <li>There is a clear structure for governance and oversight.</li>
+            </ul>
+            <p>
+              Without some attempt at verification, "charity" becomes a label like any other—easy to print, hard to
+              justify.
+            </p>
+            <div class="note">
+              In the next step, the focus shifts from <em>identifying</em> risks to walking through a simple, practical
+              workflow for verifying donation claims and project transparency. Part 2 will cover that verification
+              process in more detail.
+            </div>
+
+            <div class="affiliate-strip">
+              <span>Some donors choose to route support through exchanges or dedicated platforms:</span>
+              <div class="affiliate-buttons">
+                <a class="affiliate-btn" href="YOUR_BYBIT_AFFILIATE_LINK" target="_blank" rel="noopener noreferrer">Bybit</a>
+                <a class="affiliate-btn" href="YOUR_MEXC_AFFILIATE_LINK" target="_blank" rel="noopener noreferrer">MEXC</a>
+                <a class="affiliate-btn" href="YOUR_GIVINGBLOCK_AFFILIATE_LINK" target="_blank" rel="noopener noreferrer">The Giving Block</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="article-block">
+            <h3 style="font-size: 1rem; margin-bottom: 8px;">Related Articles</h3>
+            <p style="font-size: 0.88rem; color: var(--text-muted); line-height: 1.6;">
+              <a href="/articles/top-charity-crypto-2025.html" style="color: var(--accent);">Top Charity Crypto Projects 2025</a> •
+              <a href="/articles/on-chain-philanthropy-guide.html" style="color: var(--accent);">On-Chain Philanthropy Guide</a>
+            </p>
+          </div>
+
+          <div class="disclaimer">
+            This article is an independent, educational overview of general risk patterns in charity- and
+            impact-branded crypto projects. It is not exhaustive, and it is not a verdict on any specific token or
+            platform. None of this is financial, investment, tax, or legal advice. Digital assets are highly volatile
+            and risky. Always do your own research and consult qualified professionals before making decisions related
+            to donations, investments, or taxes.
+          </div>
+
+          <div class="back-link">
+            ← <a href="/articles/index.html">Back to Articles</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    Contact: adsgoodpeoplecoin.com@gmail.com • GoodPeopleCoin.com © 2025–2026 • Independent research. Not financial, tax or legal advice.<br>
+    <a href="/articles/index.html" style="color: var(--accent);">Articles</a> •
+    <a href="mailto:adsgoodpeoplecoin.com@gmail.com" style="color: var(--accent);">Contact</a>
+  </footer>
+</body>
+</html>

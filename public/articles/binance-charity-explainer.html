@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google Tag Manager -->
+  <script async src="https://www.googletagmanager.com/gtm.js?id=GTM-XXXXXX"></script>
+  <!-- End Google Tag Manager -->
+
+  <!-- Google Analytics GA4 -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXX');
+  </script>
+  <!-- End Google Analytics -->
+
+  <!-- Google Ads Conversion Tracking -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-XXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'AW-XXXXXXX');
+  </script>
+  <!-- End Google Ads -->
+
+  <meta charset="UTF-8" />
+  <title>How Binance Charity Tracks Funds On-Chain (Case Study) – GoodPeopleCoin</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta
+    name="description"
+    content="Neutral, educational case study on how Binance Charity structures campaigns, uses on-chain elements, and reports donations and distributions."
+  />
+  <meta name="robots" content="index,follow" />
+  <link rel="canonical" href="https://goodpeoplecoin.com/articles/binance-charity-explainer.html" />
+
+  <meta name="author" content="GoodPeopleCoin" />
+  <meta
+    name="keywords"
+    content="Binance Charity, crypto donations, on-chain philanthropy, exchange charity platform, donation tracking"
+  />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="article" />
+  <meta property="og:site_name" content="GoodPeopleCoin" />
+  <meta property="og:title" content="How Binance Charity Tracks Funds On-Chain (Case Study)" />
+  <meta
+    property="og:description"
+    content="A neutral, modern case study on how Binance Charity structures its campaigns, mixes on-chain visibility with off-chain partners, and what observers look at when evaluating transparency."
+  />
+  <meta property="og:url" content="https://goodpeoplecoin.com/articles/binance-charity-explainer.html" />
+  <meta property="og:image" content="https://goodpeoplecoin.com/goodpeoplecoin-logo.png" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:site" content="@goodpeoplecoin" />
+  <meta name="twitter:title" content="How Binance Charity Tracks Funds On-Chain (Case Study)" />
+  <meta
+    name="twitter:description"
+    content="Educational overview of how Binance Charity runs campaigns, uses blockchain elements, and where transparency shows up for observers."
+  />
+  <meta name="twitter:image" content="https://goodpeoplecoin.com/goodpeoplecoin-logo.png" />
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg: #050505;
+      --bg-alt: #0b0b0b;
+      --accent: #00ff41;
+      --accent-soft: rgba(0, 255, 65, 0.12);
+      --text-main: #f5f5f5;
+      --text-muted: #a3a3a3;
+      --border-subtle: #1f1f1f;
+      --radius-lg: 18px;
+      --radius-md: 12px;
+    }
+    * { box-sizing: border-box; }
+    html, body {
+      margin: 0;
+      padding: 0;
+      background: radial-gradient(circle at top, #0c1a0f 0, #020202 40%, #000 100%);
+      color: var(--text-main);
+      font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+    }
+    a { color: inherit; text-decoration: none; }
+    a:hover { color: var(--accent); }
+
+    .container {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 0 16px;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      background: rgba(0, 0, 0, 0.9);
+      backdrop-filter: blur(18px);
+      border-bottom: 1px solid rgba(0, 255, 65, 0.35);
+    }
+    .nav-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 14px;
+      padding: 10px 16px;
+    }
+    .logo-mark {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .logo-icon {
+      width: 32px;
+      height: 32px;
+      border-radius: 999px;
+      background: radial-gradient(circle at 30% 20%, #ffffff 0, #00ff41 30%, #007a26 100%);
+      box-shadow: 0 0 24px rgba(0, 255, 65, 0.7);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .logo-icon::before {
+      content: "❤";
+      font-size: 16px;
+      color: #020202;
+      transform: translateY(-1px);
+    }
+    .logo-text-main {
+      font-size: 0.95rem;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+    .logo-text-main span { color: var(--accent); }
+    .logo-sub {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+    }
+    nav {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 0.85rem;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+    }
+    nav a {
+      padding: 6px 11px;
+      border-radius: 999px;
+      color: var(--text-muted);
+      border: 1px solid transparent;
+      white-space: nowrap;
+    }
+    nav a:hover {
+      border-color: rgba(0, 255, 65, 0.6);
+      color: var(--accent);
+      background: rgba(0, 255, 65, 0.1);
+    }
+    .nav-cta {
+      background: var(--accent);
+      color: #000;
+      font-weight: 600;
+      box-shadow: 0 0 18px rgba(0, 255, 65, 0.85);
+    }
+
+    main {
+      padding: 28px 0 34px;
+    }
+    .page-header {
+      margin-bottom: 18px;
+    }
+    .eyebrow {
+      font-size: 0.78rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 4px;
+    }
+    h1 {
+      font-size: 1.85rem;
+      margin: 0 0 8px;
+    }
+    .meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      margin-bottom: 10px;
+    }
+    .lead {
+      font-size: 0.96rem;
+      color: var(--text-muted);
+      max-width: 720px;
+    }
+
+    .article {
+      margin-top: 20px;
+    }
+    .article-block {
+      background: rgba(5, 5, 5, 0.96);
+      border-radius: var(--radius-lg);
+      border: 1px solid var(--border-subtle);
+      padding: 16px 16px 14px;
+      box-shadow: 0 18px 40px rgba(0, 0, 0, 0.95);
+      margin-bottom: 16px;
+    }
+    .article h2 {
+      font-size: 1.12rem;
+      margin-top: 8px;
+      margin-bottom: 6px;
+    }
+    .article h3 {
+      font-size: 1rem;
+      margin-top: 10px;
+      margin-bottom: 4px;
+    }
+    .article p,
+    .article ul {
+      font-size: 0.88rem;
+      color: var(--text-muted);
+      line-height: 1.6;
+      margin-bottom: 8px;
+    }
+    .article ul {
+      padding-left: 18px;
+    }
+
+    .affiliate-strip {
+      margin-top: 14px;
+      margin-bottom: 8px;
+      padding: 12px;
+      border-radius: 999px;
+      border: 1px solid rgba(0, 255, 65, 0.4);
+      background: radial-gradient(circle at left, rgba(0, 255, 65, 0.2), rgba(0, 0, 0, 0.9));
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      align-items: center;
+      justify-content: space-between;
+      font-size: 0.8rem;
+    }
+    .affiliate-strip span {
+      color: var(--text-muted);
+    }
+    .affiliate-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+    }
+    .affiliate-btn {
+      padding: 5px 10px;
+      border-radius: 999px;
+      border: 1px solid rgba(0, 255, 65, 0.6);
+      font-size: 0.78rem;
+      cursor: pointer;
+      background: rgba(0, 0, 0, 0.9);
+    }
+    .affiliate-btn:hover {
+      background: rgba(0, 255, 65, 0.12);
+      color: var(--accent);
+    }
+
+    .disclaimer {
+      margin-top: 16px;
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      border-left: 2px solid rgba(0, 255, 65, 0.7);
+      padding-left: 10px;
+    }
+
+    .back-link {
+      margin-top: 16px;
+      font-size: 0.85rem;
+    }
+    .back-link a {
+      color: var(--accent);
+    }
+
+    footer {
+      border-top: 1px solid var(--border-subtle);
+      padding: 14px 16px 18px;
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      background: rgba(0, 0, 0, 0.9);
+      margin-top: 24px;
+      text-align: center;
+    }
+    footer a { color: var(--accent); }
+
+    @media (max-width: 720px) {
+      nav { display: none; }
+      .affiliate-strip { border-radius: 14px; align-items: flex-start; }
+    }
+  </style>
+</head>
+<body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-XXXXXX"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
+  <header>
+    <div class="nav-bar container">
+      <div class="logo-mark">
+        <div class="logo-icon"></div>
+        <div>
+          <div class="logo-text-main"><span>GoodPeople</span>Coin</div>
+          <div class="logo-sub">Independent charity &amp; impact crypto research</div>
+        </div>
+      </div>
+      <nav>
+        <a href="/">Home</a>
+        <a href="/how-it-works.html">How It Works</a>
+        <a href="/articles/index.html">Articles</a>
+        <a href="/contact.html">Contact</a>
+        <a href="/sponsored-listings.html" class="nav-cta">Sponsored Listings</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section>
+      <div class="container">
+        <div class="page-header">
+          <div class="eyebrow">Case study • On-chain philanthropy</div>
+          <h1>How Binance Charity Tracks Funds On-Chain (Case Study)</h1>
+          <div class="meta">
+            <span>Updated for 2025</span>
+            <span>Neutral educational overview</span>
+          </div>
+          <p class="lead">
+            Binance Charity is one of the most visible examples of a crypto-native philanthropy platform. This case
+            study looks at how campaigns are structured, where on-chain elements come into play, and what observers
+            typically look at when they evaluate transparency. This is <strong>not</strong> an endorsement of Binance
+            or any exchange — it's an attempt to describe the model in neutral terms.
+          </p>
+        </div>
+
+        <div class="article">
+
+          <div class="article-block">
+            <h2>1. What Binance Charity Actually Is</h2>
+            <p>
+              Binance Charity functions as a philanthropy arm linked to a major trading platform. It does not replace
+              traditional nonprofits; instead, it runs campaigns, coordinates donations, and works with partner
+              organizations for distribution.
+            </p>
+            <p>
+              The core idea is simple: provide a way for people holding digital assets to support specific causes, with
+              at least some of the flow visible on public blockchains and summarized through campaign pages.
+            </p>
+          </div>
+
+          <div class="article-block">
+            <h2>2. Campaign-Based Structure</h2>
+            <p>
+              Rather than treating all donations as one pool, Binance Charity tends to group activities into campaigns:
+              a relief effort, an education initiative, a healthcare program, and so on.
+            </p>
+            <p>Campaign pages typically include:</p>
+            <ul>
+              <li>A high-level description of the cause and intended outcomes.</li>
+              <li>Accepted assets and sometimes a target amount.</li>
+              <li>Updates and summaries as donations come in and are distributed.</li>
+            </ul>
+            <p>
+              This campaign framing makes it easier for donors to choose specific themes they care about, but it also
+              means transparency can vary from one campaign to another depending on partners and logistics.
+            </p>
+          </div>
+
+          <div class="article-block">
+            <h2>3. Where On-Chain Transparency Shows Up</h2>
+            <p>
+              Binance Charity has promoted the use of blockchain for transparency. In practice, this often shows up as:
+            </p>
+            <ul>
+              <li>Published addresses or transaction details for certain campaigns.</li>
+              <li>Dashboards or explorer links showing flows of funds.</li>
+              <li>Breakdowns of how much went to each sub-initiative or partner.</li>
+            </ul>
+            <p>
+              Observers who care about verification typically look for alignment between these on-chain details,
+              campaign summaries, and any externally verifiable information from recipient organizations.
+            </p>
+          </div>
+
+          <div class="article-block">
+            <h2>4. The Role of Partners &amp; Distribution</h2>
+            <p>
+              Like most philanthropy efforts operating across borders and jurisdictions, Binance Charity works with
+              intermediary organizations, NGOs, and local partners. These partners are often responsible for converting
+              funds into goods, services, or local currency.
+            </p>
+            <p>
+              From a transparency perspective, this introduces a second layer: even if initial transfers are visible
+              on-chain, the final impact often depends on:
+            </p>
+            <ul>
+              <li>How well partners report on what was done with allocated funds.</li>
+              <li>Whether there are independent confirmations from beneficiaries.</li>
+              <li>How clearly those stories are communicated back to donors.</li>
+            </ul>
+            <p>
+              This is not unique to Binance; it's a general reality of doing humanitarian or development work at scale.
+            </p>
+          </div>
+
+          <div class="article-block">
+            <h2>5. What Observers Typically Evaluate</h2>
+            <p>
+              People who take a closer look at crypto-linked philanthropy platforms often ask similar questions across
+              different campaigns:
+            </p>
+            <ul>
+              <li>Are donation and distribution figures coherent across different reports?</li>
+              <li>How often are campaigns updated, and with what level of detail?</li>
+              <li>Do named partner organizations acknowledge the collaboration publicly?</li>
+              <li>Is there enough data to follow funds from initial donation to some form of impact?</li>
+            </ul>
+            <p>
+              No large operation will ever be perfectly transparent, but clear gaps or contradictions can be useful
+              signals for further questioning.
+            </p>
+          </div>
+
+          <div class="article-block">
+            <h2>6. How This Fits Into the Bigger On-Chain Philanthropy Picture</h2>
+            <p>
+              Binance Charity is one example within a broader ecosystem of on-chain giving, public goods funding, and
+              donation platforms. Compared to smaller experiments, it brings scale and brand recognition; compared to
+              fully on-chain grant systems, it blends in more traditional NGO-style partnering and reporting.
+            </p>
+            <p>
+              As with any model, its strengths and weaknesses depend on what a donor values most: exposure to a large
+              platform, a specific cause, a particular region, or a particular model of transparency.
+            </p>
+
+            <div class="affiliate-strip">
+              <span>Some donors choose to route support through exchanges or dedicated platforms:</span>
+              <div class="affiliate-buttons">
+                <a class="affiliate-btn" href="#" target="_blank" rel="noopener noreferrer">Bybit</a>
+                <a class="affiliate-btn" href="#" target="_blank" rel="noopener noreferrer">MEXC</a>
+                <a class="affiliate-btn" href="#" target="_blank" rel="noopener noreferrer">The Giving Block</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="article-block">
+            <h3 style="font-size: 1rem; margin-bottom: 8px;">Related Articles</h3>
+            <p style="font-size: 0.88rem; color: var(--text-muted); line-height: 1.6;">
+              <a href="/articles/top-charity-crypto-2025.html" style="color: var(--accent);">Top Charity Crypto Projects 2025</a> •
+              <a href="/articles/on-chain-philanthropy-guide.html" style="color: var(--accent);">On-Chain Philanthropy Guide</a> •
+              <a href="/articles/best-wallets-donations-2025.html" style="color: var(--accent);">Best Wallets & Tools for Crypto Donations</a>
+            </p>
+          </div>
+
+          <div class="disclaimer">
+            This case study is an independent, educational overview based on general public information and typical
+            patterns in crypto-linked philanthropy. It is not a verdict on Binance, Binance Charity, or any specific
+            campaign, and it is not an endorsement or criticism. None of this is financial, investment, tax, or legal
+            advice. Digital assets and exchange-linked products carry significant risks. Always do your own research
+            and consult qualified professionals before making decisions related to donations, investments, or taxes.
+          </div>
+
+          <div class="back-link">
+            ← <a href="/articles/index.html">Back to Articles</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    Contact: adsgoodpeoplecoin.com@gmail.com • GoodPeopleCoin.com © 2025–2026 • Independent research. Not financial, tax or legal advice.<br>
+    <a href="/articles/index.html" style="color: var(--accent);">Articles</a> •
+    <a href="mailto:adsgoodpeoplecoin.com@gmail.com" style="color: var(--accent);">Contact</a>
+  </footer>
+</body>
+</html>

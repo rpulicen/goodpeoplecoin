@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google Tag Manager -->
+  <script async src="https://www.googletagmanager.com/gtm.js?id=GTM-XXXXXX"></script>
+  <!-- End Google Tag Manager -->
+
+  <!-- Google Analytics GA4 -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXX');
+  </script>
+  <!-- End Google Analytics -->
+
+  <!-- Google Ads Conversion Tracking -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-XXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'AW-XXXXXXX');
+  </script>
+  <!-- End Google Ads -->
+
+  <meta charset="UTF-8" />
+  <title>How On-Chain Philanthropy Works (Beginner-Friendly Guide) – GoodPeopleCoin</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta
+    name="description"
+    content="Beginner-friendly breakdown of how on-chain philanthropy works, including donation wallets, multi-sigs, verification steps, and red flags to watch for in charity and impact crypto projects."
+  />
+  <meta name="robots" content="index,follow" />
+  <link rel="canonical" href="https://goodpeoplecoin.com/articles/on-chain-philanthropy-guide.html" />
+
+  <!-- Basic branding -->
+  <meta name="author" content="GoodPeopleCoin" />
+  <meta
+    name="keywords"
+    content="on-chain philanthropy, crypto donations, charity crypto, donation wallets, blockchain transparency, impact crypto"
+  />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="article" />
+  <meta property="og:site_name" content="GoodPeopleCoin" />
+  <meta property="og:title" content="How On-Chain Philanthropy Works (Beginner-Friendly Guide)" />
+  <meta
+    property="og:description"
+    content="A simple, modern guide to how on-chain philanthropy works: donation wallets, verification, multi-sig treasuries, and red flags in charity tokens."
+  />
+  <meta property="og:url" content="https://goodpeoplecoin.com/articles/on-chain-philanthropy-guide.html" />
+  <meta property="og:image" content="https://goodpeoplecoin.com/goodpeoplecoin-logo.png" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:site" content="@goodpeoplecoin" />
+  <meta name="twitter:title" content="How On-Chain Philanthropy Works (Beginner-Friendly Guide)" />
+  <meta
+    name="twitter:description"
+    content="Beginner-friendly breakdown of on-chain philanthropy: how crypto donations are tracked, verified, and where things can still go wrong."
+  />
+  <meta name="twitter:image" content="https://goodpeoplecoin.com/goodpeoplecoin-logo.png" />
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg: #050505;
+      --bg-alt: #0b0b0b;
+      --accent: #00ff41;
+      --accent-soft: rgba(0, 255, 65, 0.12);
+      --text-main: #f5f5f5;
+      --text-muted: #a3a3a3;
+      --border-subtle: #1f1f1f;
+      --radius-lg: 18px;
+      --radius-md: 12px;
+    }
+    * { box-sizing: border-box; }
+    html, body {
+      margin: 0;
+      padding: 0;
+      background: radial-gradient(circle at top, #0c1a0f 0, #020202 40%, #000 100%);
+      color: var(--text-main);
+      font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+    }
+    a { color: inherit; text-decoration: none; }
+    a:hover { color: var(--accent); }
+
+    .container {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 0 16px;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      background: rgba(0, 0, 0, 0.9);
+      backdrop-filter: blur(18px);
+      border-bottom: 1px solid rgba(0, 255, 65, 0.35);
+    }
+    .nav-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 14px;
+      padding: 10px 16px;
+    }
+    .logo-mark {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .logo-icon {
+      width: 32px;
+      height: 32px;
+      border-radius: 999px;
+      background: radial-gradient(circle at 30% 20%, #ffffff 0, #00ff41 30%, #007a26 100%);
+      box-shadow: 0 0 24px rgba(0, 255, 65, 0.7);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .logo-icon::before {
+      content: "❤";
+      font-size: 16px;
+      color: #020202;
+      transform: translateY(-1px);
+    }
+    .logo-text-main {
+      font-size: 0.95rem;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+    .logo-text-main span { color: var(--accent); }
+    .logo-sub {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+    }
+    nav {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 0.85rem;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+    }
+    nav a {
+      padding: 6px 11px;
+      border-radius: 999px;
+      color: var(--text-muted);
+      border: 1px solid transparent;
+      white-space: nowrap;
+    }
+    nav a:hover {
+      border-color: rgba(0, 255, 65, 0.6);
+      color: var(--accent);
+      background: rgba(0, 255, 65, 0.1);
+    }
+    .nav-cta {
+      background: var(--accent);
+      color: #000;
+      font-weight: 600;
+      box-shadow: 0 0 18px rgba(0, 255, 65, 0.85);
+    }
+
+    main {
+      padding: 28px 0 34px;
+    }
+    .page-header {
+      margin-bottom: 18px;
+    }
+    .eyebrow {
+      font-size: 0.78rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 4px;
+    }
+    h1 {
+      font-size: 1.85rem;
+      margin: 0 0 8px;
+    }
+    .meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      margin-bottom: 10px;
+    }
+    .lead {
+      font-size: 0.96rem;
+      color: var(--text-muted);
+      max-width: 720px;
+    }
+
+    .article {
+      margin-top: 20px;
+    }
+    .article-block {
+      background: rgba(5, 5, 5, 0.96);
+      border-radius: var(--radius-lg);
+      border: 1px solid var(--border-subtle);
+      padding: 16px 16px 14px;
+      box-shadow: 0 18px 40px rgba(0, 0, 0, 0.95);
+      margin-bottom: 16px;
+    }
+    .article h2 {
+      font-size: 1.12rem;
+      margin-top: 8px;
+      margin-bottom: 6px;
+    }
+    .article h3 {
+      font-size: 1rem;
+      margin-top: 10px;
+      margin-bottom: 4px;
+    }
+    .article p,
+    .article ul {
+      font-size: 0.88rem;
+      color: var(--text-muted);
+      line-height: 1.6;
+      margin-bottom: 8px;
+    }
+    .article ul {
+      padding-left: 18px;
+    }
+    .pill {
+      display: inline-block;
+      font-size: 0.75rem;
+      border-radius: 999px;
+      padding: 3px 8px;
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      color: var(--text-muted);
+      margin-right: 6px;
+      margin-bottom: 4px;
+    }
+
+    .affiliate-strip {
+      margin-top: 14px;
+      margin-bottom: 8px;
+      padding: 12px;
+      border-radius: 999px;
+      border: 1px solid rgba(0, 255, 65, 0.4);
+      background: radial-gradient(circle at left, rgba(0, 255, 65, 0.2), rgba(0, 0, 0, 0.9));
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      align-items: center;
+      justify-content: space-between;
+      font-size: 0.8rem;
+    }
+    .affiliate-strip span {
+      color: var(--text-muted);
+    }
+    .affiliate-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+    }
+    .affiliate-btn {
+      padding: 5px 10px;
+      border-radius: 999px;
+      border: 1px solid rgba(0, 255, 65, 0.6);
+      font-size: 0.78rem;
+      cursor: pointer;
+      background: rgba(0, 0, 0, 0.9);
+    }
+    .affiliate-btn:hover {
+      background: rgba(0, 255, 65, 0.12);
+      color: var(--accent);
+    }
+
+    .disclaimer {
+      margin-top: 16px;
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      border-left: 2px solid rgba(0, 255, 65, 0.7);
+      padding-left: 10px;
+    }
+
+    .back-link {
+      margin-top: 16px;
+      font-size: 0.85rem;
+    }
+    .back-link a {
+      color: var(--accent);
+    }
+
+    footer {
+      border-top: 1px solid var(--border-subtle);
+      padding: 14px 16px 18px;
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      background: rgba(0, 0, 0, 0.9);
+      margin-top: 24px;
+      text-align: center;
+    }
+    footer a { color: var(--accent); }
+
+    @media (max-width: 720px) {
+      nav { display: none; }
+    }
+  </style>
+</head>
+<body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-XXXXXX"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+  <header>
+    <div class="nav-bar container">
+      <div class="logo-mark">
+        <div class="logo-icon"></div>
+        <div>
+          <div class="logo-text-main"><span>GoodPeople</span>Coin</div>
+          <div class="logo-sub">Independent charity &amp; impact crypto research</div>
+        </div>
+      </div>
+      <nav>
+        <a href="/">Home</a>
+        <a href="/how-it-works.html">How It Works</a>
+        <a href="/articles/index.html">Articles</a>
+        <a href="/contact.html">Contact</a>
+        <a href="/sponsored-listings.html" class="nav-cta">Sponsored Listings</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section>
+      <div class="container">
+        <div class="page-header">
+          <div class="eyebrow">On-chain philanthropy • explainer</div>
+          <h1>How On-Chain Philanthropy Works (Beginner-Friendly Breakdown)</h1>
+          <div class="meta">
+            <span>Updated for 2025</span>
+            <span>Neutral educational guide</span>
+          </div>
+          <p class="lead">
+            Crypto can't fix every problem in traditional charity — but it can make one thing a lot harder to fake:
+            where the money actually goes. On-chain philanthropy is about using public blockchains to make donations
+            traceable, auditable, and more transparent than a PDF report published months later.
+          </p>
+        </div>
+
+        <div class="article">
+
+          <div class="article-block">
+            <h2>1. The Core Idea: Donations You Can Actually See</h2>
+            <p>
+              In traditional charitable giving, most donors send money, receive a receipt, and trust the organization
+              to do the right thing. They rarely see the full flow of funds from donation to impact.
+            </p>
+            <p>
+              On-chain philanthropy flips that model. When donations move on a public blockchain, anyone can look up:
+            </p>
+            <ul>
+              <li>Which wallet sent the funds.</li>
+              <li>Which wallet received them.</li>
+              <li>Exactly how much was sent, and when.</li>
+            </ul>
+            <p>
+              That doesn't automatically guarantee good behavior, but it does make it easier to verify whether
+              money moved in the way a project claims.
+            </p>
+          </div>
+
+          <div class="article-block">
+            <h2>2. Donation Wallets: The Heart of On-Chain Giving</h2>
+            <p>
+              Any serious charity or impact project that works in crypto should have at least one clearly labeled
+              <strong>donation wallet</strong>. This is typically a dedicated address used only for receiving funds
+              intended for impact.
+            </p>
+            <p>People who care about transparency often look for:</p>
+            <ul>
+              <li>Donation wallet addresses published on the official website.</li>
+              <li>Consistent use of the same addresses over time.</li>
+              <li>Clear separation between donation, treasury, and team wallets.</li>
+            </ul>
+            <p>
+              If a project talks a lot about "donations" but never shares actual wallet addresses, that's a major
+              red flag.
+            </p>
+          </div>
+
+          <div class="article-block">
+            <h2>3. Multi-Sig &amp; Treasury Controls</h2>
+            <p>
+              On-chain philanthropy isn't only about donation wallets; it's also about how treasuries and pooled funds
+              are governed. A common tool here is the <strong>multi-signature wallet</strong> (multi-sig), where more
+              than one person must approve a transaction.
+            </p>
+            <p>Strong projects often:</p>
+            <ul>
+              <li>Use multi-sig for treasury or donation wallets.</li>
+              <li>Have clear rules about who holds keys and how many signatures are required.</li>
+              <li>Publish these details so the community knows how funds are controlled.</li>
+            </ul>
+            <p>
+              If a single individual can move all the "charity funds" without oversight, the risk of mismanagement or
+              abuse is much higher, regardless of what the marketing says.
+            </p>
+          </div>
+
+          <div class="article-block">
+            <h2>4. How People Verify On-Chain Donations</h2>
+            <p>
+              One of the biggest advantages of on-chain giving is that people don't have to take everything on faith.
+              With a basic block explorer (like Etherscan, Solscan, BscScan and others), observers can:
+            </p>
+            <ul>
+              <li>Paste in a donation wallet address and see all incoming and outgoing transactions.</li>
+              <li>Cross-check large donations with announcements or reports.</li>
+              <li>Monitor how quickly funds are distributed versus sitting idle.</li>
+            </ul>
+            <p>
+              When a project claims, "We donated X amount to Y cause," some people will look for:
+            </p>
+            <ul>
+              <li>A transaction hash that matches the claimed amount.</li>
+              <li>A receiving address associated with a known organization or partner.</li>
+              <li>Any public acknowledgement from the recipient that the funds arrived.</li>
+            </ul>
+            <p>
+              The more these elements line up, the more credible the donation looks.
+            </p>
+          </div>
+
+          <div class="article-block">
+            <h2>5. Common Models of On-Chain Philanthropy</h2>
+            <p>In practice, on-chain philanthropy tends to fall into a few broad patterns:</p>
+
+            <h3>Model A: Direct donations</h3>
+            <p>
+              Funds are sent directly from a donor or project wallet to a charity or nonprofit wallet. This is the
+              simplest to understand and verify.
+            </p>
+
+            <h3>Model B: "Taxed" or fee-based tokens</h3>
+            <p>
+              Some tokens implement a small fee on trades (for example, 1–3%), with a portion of that fee routed to a
+              donation wallet.
+            </p>
+            <p>
+              This model can work when:
+            </p>
+            <ul>
+              <li>The donation wallet is public.</li>
+              <li>Transfers out of the wallet are explained and documented.</li>
+              <li>There is periodic reporting on where the funds end up.</li>
+            </ul>
+
+            <h3>Model C: Grant and matching platforms</h3>
+            <p>
+              Platforms like Gitcoin and some other public goods experiments coordinate grant rounds and matching
+              pools. These systems often publish detailed funding breakdowns and, in some cases, integrate on-chain
+              voting and distribution.
+            </p>
+
+            <h3>Model D: Exchange or platform-based charity arms</h3>
+            <p>
+              Large exchanges and infrastructure providers sometimes run dedicated philanthropic platforms. They may
+              manage donation campaigns, aggregate funds, and work with partner organizations to distribute proceeds.
+            </p>
+          </div>
+
+          <div class="article-block">
+            <h2>6. Where Things Can Still Go Wrong</h2>
+            <p>
+              Even with everything on-chain, on-chain philanthropy is not immune to problems. People who track these
+              projects often watch for:
+            </p>
+            <ul>
+              <li>Donation wallets that receive funds but rarely send anything out.</li>
+              <li>Transfers to unexplained addresses or personal wallets.</li>
+              <li>One-time, small donations used heavily in marketing.</li>
+              <li>Projects abruptly abandoning reporting once attention fades.</li>
+            </ul>
+            <p>
+              The blockchain can show what happened; it cannot automatically explain <em>why</em> those choices were
+              made or whether they align with donors' expectations.
+            </p>
+          </div>
+
+          <div class="article-block">
+            <h2>7. Red Flags in Charity &amp; Impact Tokens</h2>
+            <p>
+              There are many sincere teams trying to do good work with on-chain tools. There are also projects that
+              borrow charitable language primarily as a marketing hook.
+            </p>
+            <p>Common warning signs include:</p>
+            <ul>
+              <li>No published donation or treasury wallets.</li>
+              <li>Only one small donation ever, with no follow-up.</li>
+              <li>Heavy promotion of "we donate X% of every trade" with no real reporting.</li>
+              <li>Developers controlling most of the supply with no vesting or lockups.</li>
+              <li>Charities mentioned by name who never acknowledge the relationship.</li>
+            </ul>
+            <p>
+              When several of these appear at once, many observers conclude that direct donations to known organizations
+              may be a safer path than routing support through a speculative token.
+            </p>
+          </div>
+
+          <div class="article-block">
+            <h2>8. What Good On-Chain Practices Look Like</h2>
+            <p>
+              On the positive side, there are recurring patterns in projects that take transparency seriously. People
+              often appreciate when teams:
+            </p>
+            <ul>
+              <li>Publish and maintain a clear list of relevant wallet addresses.</li>
+              <li>Provide transaction hashes for major donations.</li>
+              <li>Share receipts, letters, or confirmations from recipient organizations.</li>
+              <li>Use multi-sig for treasuries and donation funds where appropriate.</li>
+              <li>Offer periodic summaries that match on-chain activity.</li>
+            </ul>
+            <p>
+              No system is perfect, but these habits generally give donors and community members more confidence in how
+              funds are being handled.
+            </p>
+          </div>
+
+          <div class="article-block">
+            <h2>9. How to Approach On-Chain Philanthropy as a Donor</h2>
+            <p>
+              If you are interested in supporting causes through crypto, a few practical steps can help you navigate
+              the space more safely:
+            </p>
+            <ul>
+              <li>Decide whether you prefer donating directly to established organizations or through crypto-native projects.</li>
+              <li>Check whether the group you're supporting shares clear wallet addresses and any form of reporting.</li>
+              <li>Use block explorers to confirm basic details for larger transfers.</li>
+              <li>Consider speaking with a tax professional if donation size or local rules make that relevant.</li>
+            </ul>
+            <p>
+              For many people, a balanced approach—using both established platforms and carefully vetted crypto-native
+              experiments—feels more comfortable than going all-in on unproven tokens.
+            </p>
+
+            <div class="affiliate-strip">
+              <span>Some donors choose to route support through exchanges or dedicated platforms:</span>
+              <div class="affiliate-buttons">
+                <a class="affiliate-btn" href="YOUR_BYBIT_AFFILIATE_LINK" target="_blank" rel="noopener noreferrer">Bybit</a>
+                <a class="affiliate-btn" href="YOUR_MEXC_AFFILIATE_LINK" target="_blank" rel="noopener noreferrer">MEXC</a>
+                <a class="affiliate-btn" href="YOUR_GIVINGBLOCK_AFFILIATE_LINK" target="_blank" rel="noopener noreferrer">The Giving Block</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="article-block">
+            <h3 style="font-size: 1rem; margin-bottom: 8px;">Related Articles</h3>
+            <p style="font-size: 0.88rem; color: var(--text-muted); line-height: 1.6;">
+              <a href="/articles/top-charity-crypto-2025.html" style="color: var(--accent);">Top Charity Crypto Projects 2025</a> •
+              <a href="/articles/crypto-charity-risks.html" style="color: var(--accent);">Risks, Red Flags & Verification</a>
+            </p>
+          </div>
+
+          <div class="disclaimer">
+            This article is an independent, general overview of on-chain philanthropy. It does not cover every model or
+            project, and it is not an endorsement of any specific token, platform, or organization. Nothing here is
+            financial, investment, tax, or legal advice. Always do your own research and consult qualified professionals
+            before making decisions related to donations, investments, or taxes.
+          </div>
+
+          <div class="back-link">
+            ← <a href="/articles/index.html">Back to Articles</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    Contact: adsgoodpeoplecoin.com@gmail.com • GoodPeopleCoin.com © 2025–2026 • Independent research. Not financial, tax or legal advice.<br>
+    <a href="/articles/index.html" style="color: var(--accent);">Articles</a> •
+    <a href="mailto:adsgoodpeoplecoin.com@gmail.com" style="color: var(--accent);">Contact</a>
+  </footer>
+</body>
+</html>
